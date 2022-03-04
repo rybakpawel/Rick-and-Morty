@@ -1,5 +1,5 @@
 <template>
-  <div class="history">elo</div>
+  <div class="history">History</div>
 </template>
 
 <script>

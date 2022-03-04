@@ -1,8 +1,4 @@
 <template>
-  <!-- <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/history">About</router-link>
-  </nav> -->
   <Header />
   <router-view />
 </template>
@@ -11,33 +7,28 @@
 import Header from "./components/Header.vue";
 
 export default {
-  setup() {
-    return { Header };
+  name: "App",
+  components: {
+    Header,
   },
 };
 </script>
 
-
-
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav {
-  padding: 30px;
+#app {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  color: $darker-blue;
 
   a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+    text-decoration: none;
   }
 }
 </style>
