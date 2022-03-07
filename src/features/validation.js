@@ -9,12 +9,12 @@ const validation = () => {
     const formValidation = (data) => {
         const regex = /^[A-Za-z0-9" "]+$/
 
-        if (data.title.length < 3 || data.title.length > 32) error.value = { 
-            message: "The title must be more than 3 and less than 32 characters",
+        if (!data.title) error.value = { 
+            message: "Please enter the title",
             item: "title"
         }
-        else if (!data.title) error.value = { 
-            message: "Please enter the title",
+        else if (data.title.length < 3 || data.title.length > 32) error.value = { 
+            message: "The title must be more than 3 and less than 32 characters",
             item: "title"
         }
         else if (!regex.test(data.title)) error.value = {
