@@ -3,17 +3,19 @@
     <img :src="logo" alt="logo" class="logo" />
     <div class="nav">
       <router-link
-        to="/"
+        :to="{ name: 'NewMessage' }"
         class="nav__button"
         :class="{ 'nav__button--active': $route.path == '/' }"
-        >New message</router-link
       >
+        New message
+      </router-link>
       <router-link
-        to="/history"
+        :to="{ name: 'History' }"
         class="nav__button nav__button--history"
         :class="{ 'nav__button--active': $route.path == '/history' }"
-        >History</router-link
       >
+        History
+      </router-link>
     </div>
   </header>
 </template>
